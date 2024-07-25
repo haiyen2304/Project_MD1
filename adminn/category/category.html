@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danh mục</title>
+
+    <link rel="stylesheet" href="./category.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-right">
+            <a id="btn-logout">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="sidenav">
+        <a href="../user/user.html">Người dùng</a>
+        <a href="#" class="sang">Danh mục</a>
+        <a href="../product/product.html">Sản phẩm</a>
+        <a href="#">Hóa đơn</a>
+    </div>
+
+
+
+    <div class="main">
+
+        <form class="form-inline">
+            <div class="danhmuc">
+
+                <h2 id="titel-form">Thêm danh mục</h2>
+
+                <input id="input-category-name" class="tendanhmuc" type="text" placeholder="tên danh mục">
+
+                <p id="error-category-name"></p>
+                <button id="btn-no" class="button" type="button">Hủy</button>
+                <button id="btn-yes" class="button" type="button">Đồng ý</button>
+
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="danhmuc" style="max-width: 100%;">
+                <h2>Danh mục</h2>
+
+                <label for="sort-category-name">Sắp xếp:</label>
+                <select id="sort-category-name" name="sort" onchange="renderCategory()">
+                    <option value="nomal">Tên ban đầu</option>
+                    <option value="aes">Tên tăng dần</option>
+                    <option value="des">Tên giảm dần</option>
+                </select>
+
+                <input id="input-search-name" type="text" placeholder="tên">
+
+                <button class="button tim" type="button" onclick="renderCategory()">Tìm</button>
+
+
+            </div>
+        </form>
+
+        <div class="fieldset2">
+            <table id="example" class="display">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+
+                <tbody id="list-category">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Cort B</td>
+                        <td>
+                            <button class="update">Sửa</button>
+                            <button class="update">Xóa</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- <div class="pagination">
+            <div>
+                <button class="click">
+                    << </button>
+            </div>
+            <span class="next">1</span>
+            <span class="next">2</span>
+            <span class="next">3</span>
+            <span class="next">4</span>
+
+            <div> <button class="click">>></button></div>
+        </div> -->
+
+    </div>
+    <script src="../shared/shared.js"></script>
+
+    <script src="./category.js"></script>
+
+</body>
+
+</html>

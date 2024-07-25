@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sản phẩm</title>
+
+    <link rel="stylesheet" href="./product.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-right">
+            <a id="btn-logout">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="sidenav">
+        <a href="../user/user.html">Người dùng</a>
+        <a href="../category/category.html">Danh mục</a>
+        <a href="#" class="sang">Sản phẩm</a>
+        <a href="#">Hóa đơn</a>
+    </div>
+
+    <div class="main">
+
+        <form class="form-inline">
+            <div>
+                <button id="addProduct" class="button" type="button">Thêm sản phẩm</button>
+            </div>
+        </form>
+
+        <form class="form-inline">
+            <div class="danhmuc" style="max-width: 100%;">
+                <h2>Sản phẩm</h2>
+
+                <label for="">Sắp xếp:</label>
+                <select id="select-sort" name="sort" onchange="renderProduct()">
+                    <option value="nomal">Tên ban đầu</option>
+                    <option value="aes">Tên tăng dần</option>
+                    <option value="des">Tên giảm dần</option>
+                </select>
+
+                <input id="input-search-name" type="text" placeholder="tên">
+
+                <button class="button tim" type="button" onclick="search()">Tìm</button>
+
+
+
+            </div>
+        </form>
+
+        <div class="fieldset2">
+            <table class="display">
+                <thead>
+                    <tr>
+
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Ảnh</th>
+                        <th>Giá</th>
+                        <th>Mô tả</th>
+                        <th>Số lượng</th>
+                        <th>Loại</th>
+                        <th>Hành động</th>
+
+                    </tr>
+                </thead>
+
+                <tbody id="list-product">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>
+                            <button class="update">Sửa</button>
+                            <button class="update">Xóa</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div id="pagination-product" class="pagination">
+            <!-- <div>
+                <button class="click">
+                    << </button>
+            </div>
+
+
+            <span class="next">1</span>
+
+
+            <div>
+                <button class="click">>></button>
+            </div> -->
+        </div>
+
+    </div>
+    <script src="../shared/shared.js"></script>
+
+    <script src="./product.js"></script>
+
+</body>
+
+</html>

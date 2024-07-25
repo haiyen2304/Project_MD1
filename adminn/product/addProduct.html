@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thêm sản phẩm</title>
+    <link rel="stylesheet" href="./addProduct.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="login form">
+            <header>Thêm sản phẩm</header>
+            <form id="form-add-product">
+                <input name="name" type="text" placeholder="Tên">
+                <input name="description" type="text" placeholder="Mô tả">
+                <input name="stock" min="1" type="number" placeholder="Số lượng">
+                <input name="price" min="1" type="number" placeholder="Giá">
+
+                <select id="select-category" onchange="selectCategoryId()">
+                </select>
+
+                <br>
+                <br>
+
+                <label class="label-image" for="input-image">Hình ảnh</label>
+                <input hidden type="file" accept="image/*" id="input-image">
+                <img width="100px" src="" alt="" id="image-product">
+
+                <div style="display: flex; justify-content: space-between;">
+                    <button class="button" type="button" id="btn-back">
+                        <a href="./product.html">Quay về</a>
+                    </button>
+                    <button class="button" type="submit">Thêm sản phẩm</button>
+                </div>
+
+                <p id="error-product" style="color: red;"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./addProduct.js"></script>
+
+</body>
+
+</html>

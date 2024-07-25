@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Người dùng</title>
+
+    <link rel="stylesheet" href="./user.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-right">
+            <a id="btn-logout">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="sidenav">
+        <a href="#" class="sang">Người dùng</a>
+        <a href="../category/category.html">Danh mục</a>
+        <a href="../product/product.html">Sản phẩm</a>
+        <a href="#">Hóa đơn</a>
+    </div>
+
+
+    <div class="main">
+
+        <form class="form-inline">
+            <div class="danhmuc" style="max-width: 100%;">
+                <h2>Người dùng</h2>
+
+                <label for="sort-category-name">Sắp xếp:</label>
+                <select id="select-sort" name="sort" onchange="renderUser()">
+                    <option value="nomal">Tên ban đầu</option>
+                    <option value="aes">Tên tăng dần</option>
+                    <option value="des">Tên giảm dần</option>
+                </select>
+
+                <input id="input-search-name" type="text" placeholder="tên">
+
+                <button class="button tim" type="button" onclick="renderUser()">Tìm</button>
+
+
+            </div>
+        </form>
+
+        <div class="fieldset2">
+            <table id="example" class="display">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Trạng thái</th>
+                        <th>Quyền</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+
+                <tbody id="list-users">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>
+                            <button class="update">Block / Ban</button>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div id="pagination-user" class="pagination">
+            <!-- <div><button class="click"><< </button></div> -->
+            <!-- <span class="next">1</span> -->
+            <!-- <div> <button class="click">>></button></div> -->
+        </div>
+
+    </div>
+
+    <script src="../shared/shared.js"></script>
+    <script src="./user.js"></script>
+
+</body>
+
+</html>

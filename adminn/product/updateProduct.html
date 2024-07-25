@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa sản phẩm</title>
+    <link rel="stylesheet" href="./addProduct.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="login form">
+            <header>Sửa sản phẩm</header>
+            <form id="form-update-product">
+                <input id="product-name" name="name" type="text" placeholder="Tên">
+                <input id="product-description" name="description" type="text" placeholder="Mô tả">
+                <input id="product-stock" name="stock" min="1" type="number" placeholder="Số lượng">
+                <input id="product-price" name="price" min="1" type="number" placeholder="Giá">
+
+                <select id="select-category" onchange="selectCategoryId()">
+                    <!-- <option value="0" selected disabled> Chon loai banh</option> -->
+                    <!-- selected : thằng nào được selected thì thằng đấy được hiện lên
+                          disabled : là ẩn đi không cho chọn -->
+                    <!-- <option value=""></option> -->
+
+                </select>
+
+                <input hidden type="file" accept="image/*" id="input-image">
+                <br>
+                <br>
+
+                <label class="ha" for="input-image">Hình ảnh</label>
+                <img width="100px" src="" alt="" id="image-product">
+
+                <div style="display: flex; justify-content: space-between;">
+                    <button class="button" type="button" id="btn-back">
+                        <a href="./product.html">Quay về</a>
+                    </button>
+                    <button class="button" type="submit">Thêm sản phẩm</button>
+                </div>
+
+                <p id="error-product" style="color: red;"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./updateProductt2.js"></script>
+
+</body>
+
+</html>

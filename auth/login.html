@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+            <header>Đăng nhập</header>
+            <form id="form-add-register">
+
+                <input id="input-user-email" type="text" placeholder="email">
+                <input id="input-user-password" type="password" placeholder="mật khẩu">
+                <a href="#">Quên mật khẩu</a>
+
+                <p id="error-login" style="color: red;"></p>
+                <input type="button" class="button" value="Đăng nhập" onclick="login()">
+            </form>
+            <div class="signup">
+                <span class="signup">Chưa đăng kí tài khoản
+                    <label for="check">Ấn để đăng kí</label>
+                </span>
+            </div>
+        </div>
+        <div class="registration form">
+            <header>Đăng kí</header>
+            <form>
+
+                <input id="register-username" type="text" placeholder="username">
+                <input id="register-email" type="email" placeholder="email">
+                <input id="register-password" type="password" placeholder="tạo mật khẩu">
+                <input id="register-confirm-password" type="password" placeholder="nhập lại mật khẩu">
+
+                <p id="error-signin" style="color: red;"></p>
+                <input type="button" class="button" value="Đăng kí" onclick="register()">
+            </form>
+
+            <div class="signup">
+                <span class="signup">Đã có tài khoảng
+                    <label for="check">Ấn để đăng nhập</label>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
