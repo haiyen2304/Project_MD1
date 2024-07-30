@@ -21,7 +21,7 @@
         <a href="../user/user.html">Người dùng</a>
         <a href="#" class="sang">Danh mục</a>
         <a href="../product/product.html">Sản phẩm</a>
-        <a href="#">Hóa đơn</a>
+        <a href="../product/bill.html">Hóa đơn</a>
     </div>
 
 
@@ -35,9 +35,10 @@
 
                 <input id="input-category-name" class="tendanhmuc" type="text" placeholder="tên danh mục">
 
-                <p id="error-category-name"></p>
                 <button id="btn-no" class="button" type="button">Hủy</button>
                 <button id="btn-yes" class="button" type="button">Đồng ý</button>
+
+                <p id="error-category-name"></p>
 
             </div>
         </form>
@@ -53,15 +54,12 @@
                     <option value="des">Tên giảm dần</option>
                 </select>
 
-                <input id="input-search-name" type="text" placeholder="tên">
-
                 <button class="button tim" type="button" onclick="renderCategory()">Tìm</button>
-
-
+                <input id="input-search-name" type="text" placeholder="tên">
             </div>
         </form>
 
-        <div class="fieldset2">
+        <div class="cactruong">
             <table id="example" class="display">
                 <thead>
                     <tr>

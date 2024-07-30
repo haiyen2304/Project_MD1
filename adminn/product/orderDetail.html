@@ -8,6 +8,11 @@
     <title>Sản phẩm</title>
 
     <link rel="stylesheet" href="./product.css">
+
+    <style>
+
+    </style>
+
 </head>
 
 <body>
@@ -21,7 +26,7 @@
     <div class="sidenav">
         <a href="../user/user.html">Người dùng</a>
         <a href="../category/category.html">Danh mục</a>
-        <a href="#" class="sang">Sản phẩm</a>
+        <a href="#">Sản phẩm</a>
         <a href="../product/bill.html">Hóa đơn</a>
     </div>
 
@@ -29,57 +34,34 @@
 
         <form class="form-inline">
             <div>
-                <button id="addProduct" class="button" type="button">Thêm sản phẩm</button>
+                <button id="addProduct" class="button" type="button">
+                    <a style="color: white; text-decoration: none;" href="./bill.html">
+                        Quay lại hóa đơn
+                    </a>
+                </button>
             </div>
         </form>
 
-        <form class="form-inline">
-            <div class="danhmuc" style="max-width: 100%;">
-                <h2>Sản phẩm</h2>
 
-                <label for="">Sắp xếp:</label>
-                <select id="select-sort" name="sort" onchange="renderProduct()">
-                    <option value="nomal">Tên ban đầu</option>
-                    <option value="aes">Tên tăng dần</option>
-                    <option value="des">Tên giảm dần</option>
-                </select>
-
-                <button class="button tim" type="button" onclick="search()">Tìm</button>
-                <input id="input-search-name" type="text" placeholder="tên">
-
-            </div>
-        </form>
 
         <div class="fieldset2">
             <table class="display">
                 <thead>
                     <tr>
 
-                        <th>STT</th>
-                        <th>Tên</th>
-                        <th>Ảnh</th>
+                        <th>Sản phẩm</th>
                         <th>Giá</th>
-                        <th>Mô tả</th>
-                        <th>Số lượng</th>
-                        <th>Loại</th>
-                        <th>Hành động</th>
-
+                        <th>Số lượng đặt hàng</th>
+                        <th>Tổng tiền</th>
                     </tr>
                 </thead>
 
-                <tbody id="list-product">
+                <tbody id="list-cart-item">
                     <!-- <tr>
                         <td>1</td>
                         <td>Cort B</td>
                         <td>Cort B</td>
                         <td>Cort B</td>
-                        <td>Cort B</td>
-                        <td>Cort B</td>
-                        <td>Cort B</td>
-                        <td>
-                            <button class="update">Sửa</button>
-                            <button class="update">Xóa</button>
-                        </td>
                     </tr> -->
 
                 </tbody>
@@ -105,7 +87,7 @@
     </div>
     <script src="../shared/shared.js"></script>
 
-    <script src="./product.js"></script>
+    <script src="./orderDetail.js"></script>
 
 </body>
 

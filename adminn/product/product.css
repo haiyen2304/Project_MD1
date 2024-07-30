@@ -34,9 +34,13 @@ body {
     background-color: red;
     border-radius: 5px;
     height: 45px;
-
+    overflow: hidden;
 }
 
+th,
+td {
+    padding: 5px 0;
+}
 
 .sidenav {
     height: 100%;
@@ -48,18 +52,19 @@ body {
     background-color: #5b3236;
     overflow-x: hidden;
     padding-top: 100px;
+
 }
 
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #D4D4D4;
+    color: white;
     display: block;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: black;
 }
 
 .main {
@@ -100,9 +105,13 @@ fieldset {
     width: 600px
 }
 
+#addProduct {
+    font-size: 16px;
+}
+
 .button {
     margin: 5px 20px;
-    width: 100px;
+    min-width: 100px;
 }
 
 .fieldset2 {
@@ -147,6 +156,10 @@ select {
     border-radius: 4px;
     color: white;
     cursor: pointer;
+}
+
+#input-search-name {
+    float: right;
 }
 
 .next:hover,
@@ -227,6 +240,7 @@ table,
 td,
 th {
     border: 1px solid #333;
+    text-align: center;
 }
 
 .sang {
@@ -252,6 +266,13 @@ th {
     font-size: large;
     cursor: pointer;
     padding: 5px;
+
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin: 0 5px;
 }
 
 .pagination {
@@ -282,4 +303,11 @@ th {
 }
 #btn-logout {
     cursor: pointer;
+    color: white;
+
+}
+
+#btn-logout:hover {
+    background-color: red;
+    color: black;
 }

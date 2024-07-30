@@ -61,7 +61,7 @@ function register() {
   }
 
   if (registerConfirmPassword.value != newUser.password) {
-    errorSignin.innerHTML = "xác nhận lại chưa đúng password";
+    errorSignin.innerHTML = "Xác nhận lại chưa đúng password";
     return;
   } else {
     errorSignin.innerHTML = "";
@@ -74,6 +74,7 @@ function register() {
   registerEmail.value = "";
   registerPassword.value = "";
   registerConfirmPassword.value = "";
+  alert("Bạn đã đăng ký thành công, hãy đăng nhập!");
 }
 
 //=================================================================
@@ -105,7 +106,7 @@ function login() {
   }
   // kiểm tra xem tài khoản có bị BAN k
   if (!userCheck.status) {
-    errorLogin.innerHTML = "tài khoản đã bị khóa";
+    errorLogin.innerHTML = "Tài khoản đã bị khóa";
     return;
   } else {
     errorLogin.innerHTML = "";

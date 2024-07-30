@@ -34,7 +34,7 @@ body {
     background-color:red;
     border-radius: 5px;
     height: 45px;
-    
+    overflow: hidden;
 }
 
 
@@ -54,12 +54,17 @@ body {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #D4D4D4;
+    color: white;
     display: block;
 }
 
+th,
+td {
+    padding: 5px 0;
+}
+
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: black;
 }
 
 .main {
@@ -102,7 +107,7 @@ fieldset {
     margin:5px 20px;
     width: 100px;
 }
-.fieldset2 {
+.cactruong {
     width: 100%;
     border: 2px solid #5b3236;
     border-radius: 10px;
@@ -125,6 +130,7 @@ fieldset {
     display: inline-block;
 }
 
+
 .form-inline input,
 select {
     vertical-align: middle;
@@ -136,6 +142,7 @@ select {
     border-radius: 10px;
 }
 
+
 .form-inline button {
     padding: 10px 20px;
     background-color: #5b3236;
@@ -145,6 +152,11 @@ select {
     color: white;
     cursor: pointer;
 }
+
+#input-search-name {
+    float: right;
+}
+
 .next:hover,
 .click:hover,
 .update:hover,
@@ -175,7 +187,7 @@ select {
         font-size: 18px;
     }
 
-    .fieldset2 {
+    .cactruong {
         position: absolute;
     }
 }
@@ -221,6 +233,7 @@ table {
 
 table, td, th {
     border: 1px solid #333;
+    text-align: center;
 }
 .sang{
     color: white;
@@ -265,4 +278,10 @@ table, td, th {
 
 #btn-logout {
     cursor: pointer;
+    color: white;
+  
+}
+#btn-logout:hover{
+    background-color: red;
+    color: black;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-    <title>Sản phẩm</title>
+    <title>Tổng đơn hàng</title>
 
     <link rel="stylesheet" href="./product.css">
 </head>
@@ -21,27 +21,22 @@
     <div class="sidenav">
         <a href="../user/user.html">Người dùng</a>
         <a href="../category/category.html">Danh mục</a>
-        <a href="#" class="sang">Sản phẩm</a>
-        <a href="../product/bill.html">Hóa đơn</a>
+        <a href="../product/product.html">Sản phẩm</a>
+        <a href="#" class="sang">Hóa đơn</a>
     </div>
 
     <div class="main">
 
-        <form class="form-inline">
-            <div>
-                <button id="addProduct" class="button" type="button">Thêm sản phẩm</button>
-            </div>
-        </form>
 
         <form class="form-inline">
             <div class="danhmuc" style="max-width: 100%;">
-                <h2>Sản phẩm</h2>
+                <h2>Hóa đơn</h2>
 
                 <label for="">Sắp xếp:</label>
-                <select id="select-sort" name="sort" onchange="renderProduct()">
-                    <option value="nomal">Tên ban đầu</option>
-                    <option value="aes">Tên tăng dần</option>
-                    <option value="des">Tên giảm dần</option>
+                <select id="select-sort" name="sort" onchange="renderBill()">
+                    <option value="nomal">Thời gian ban đầu</option>
+                    <option value="aes">Thời gian tăng dần</option>
+                    <option value="des">Thời gian giảm dần</option>
                 </select>
 
                 <button class="button tim" type="button" onclick="search()">Tìm</button>
@@ -54,20 +49,23 @@
             <table class="display">
                 <thead>
                     <tr>
-
                         <th>STT</th>
-                        <th>Tên</th>
-                        <th>Ảnh</th>
-                        <th>Giá</th>
-                        <th>Mô tả</th>
-                        <th>Số lượng</th>
-                        <th>Loại</th>
-                        <th>Hành động</th>
+                        <th>Người đặt</th>
+                        <th>Người nhận</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Ghi chú</th>
+                        <th>Ngày</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Giỏ hàng</th>
+                        <th>Xác Nhận đơn bán</th>
 
                     </tr>
                 </thead>
 
-                <tbody id="list-product">
+                <tbody id="list-bill">
                     <!-- <tr>
                         <td>1</td>
                         <td>Cort B</td>
@@ -76,8 +74,11 @@
                         <td>Cort B</td>
                         <td>Cort B</td>
                         <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
+                        <td>Cort B</td>
                         <td>
-                            <button class="update">Sửa</button>
+                            <button class="update">Chấp nhận</button>
                             <button class="update">Xóa</button>
                         </td>
                     </tr> -->
@@ -105,7 +106,7 @@
     </div>
     <script src="../shared/shared.js"></script>
 
-    <script src="./product.js"></script>
+    <script src="./bill.js"></script>
 
 </body>
 

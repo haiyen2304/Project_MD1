@@ -34,7 +34,7 @@ body {
     background-color: red;
     border-radius: 5px;
     height: 45px;
-
+    overflow: hidden;
 }
 
 
@@ -54,12 +54,12 @@ body {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #D4D4D4;
+    color: white;
     display: block;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: black;
 }
 
 .main {
@@ -149,6 +149,14 @@ select {
     cursor: pointer;
 }
 
+#input-search-name {
+    float: right;
+}
+
+th, td {
+    padding: 5px 0;
+}
+
 .next:hover,
 .click:hover,
 .update:hover,
@@ -227,6 +235,7 @@ table,
 td,
 th {
     border: 1px solid #333;
+    text-align: center;
 }
 
 .sang {
@@ -252,6 +261,13 @@ th {
     font-size: large;
     cursor: pointer;
     padding: 5px;
+
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin: 0 5px;
 }
 
 .pagination {
@@ -279,6 +295,13 @@ th {
 .hidden {
     display: none;
 }
-#btn-logout{
+#btn-logout {
     cursor: pointer;
+    color: white;
+
+}
+
+#btn-logout:hover {
+    background-color: red;
+    color: black;
 }
